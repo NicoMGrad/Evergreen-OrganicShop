@@ -1,0 +1,64 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    background: white;
+}
+
+.logo {
+    width:250px;
+}
+
+.btn-carrito {
+    background-color: var(--gris-claro);
+    color: var(--rojo);
+    padding: .7rem;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    margin-left: 1.5rem!important;
+    position: relative;
+    transition: var(--animacion-hover);
+    cursor: pointer;
+}
+
+    .btn-carrito:hover {
+        background-color: var(--rojo);
+        color: white;
+        transition: var(--animacion-hover);
+    }
+
+.marker-carrito {
+    background: white;
+    color: var(--verde-claro);
+    font-size: .8rem;
+    font-weight: bold;
+    position: absolute;
+    top: -10%;
+    right: -35%;
+    padding: 0.2rem .5rem;
+    border-radius: 8px;
+}
+
+.combo-carrito {
+    display: flex;
+    align-items: center;
+    margin-right: 1.2rem;
+}
+
+.item-carrito {
+    border-bottom: 2px solid var(--gris-claro);
+    display: flex;
+    justify-content: space-between;
+}
+    .item-carrito span {
+        margin-left: 1rem;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 0;
+        color: var(--gris-medio);
+    }

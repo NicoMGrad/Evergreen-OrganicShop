@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat','Helvetica',sans-serif;
+}
+
+:root {
+    --verde-oscuro: #228765;
+    --verde-medio: #8cc63f;
+    --verde-claro: #d9e021;
+    --naranja: #ffc022;
+    --rojo: #f15a24;
+    --negro: #333333;
+    --gris-claro: #f6f6f6;
+    --gris-medio: #bbbbbb;
+    --blanco: #ffffff;
+    --animacion-hover: all cubic-bezier(.54,0,.16,.99) 150ms;
+}
+
+.rojo {
+    color: var(--rojo);
+}
+
+.contenedor-card {
+    width: auto;
+    height:270px;
+    display: flex;
+    align-items: flex-start;
+    margin: 1rem;
+}
+
+.card,
+.card-primary,
+.combo-item-price,
+.card-secondary,
+.item-info,
+.card-secondary > div:last-child,
+.item-info div {
+    display: flex;
+}
+
+.card-secondary > div:last-child {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.card,
+.combo-item-price,
+.card-secondary,
+.item-info div {
+    flex-direction: column;
+}
+
+.combo-item-price {
+    align-items: flex-start;
+}
+
+.card,
+.card-secondary {
+    align-items: center;
+}
+
+.card-secondary {
+   justify-content: flex-end;
+}
+
+.card {
+    position: relative;
+    width:100%;
+    max-width:310px;
+    cursor:pointer;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.card:hover {
+    z-index: 2;
+}
+
+.card-primary {
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.card-primary {
+    background: none;
+    width: 92%;
+    z-index: 1;
+    position: absolute;
+    top: 10%;
+    right: 0%;
+}
+
+.card-secondary {
+    width: 100%;
+    background: var(--blanco);
+    -webkit-box-shadow: 3px 3px 29px -12px rgba(0,0,0,0.5);
+    -moz-box-shadow: 3px 3px 29px -12px rgba(0,0,0,0.5);
+    box-shadow: 3px 3px 29px -12px rgba(0,0,0,0.5);
+    border-radius: 16px;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 1rem;
+    height: 100px;
+    margin-top: 150px;
+    transition: var(--animacion-hover);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: var(--negro);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.div-price {
+    background: var(--verde-claro);
+    border-radius: 0 18px 18px 18px;
+    padding: .7rem;
+    line-height: 1.05;
+    color:var(--blanco);
+    margin-bottom: 1rem;
+}
+
+.price-valor {
+    font-size: 1.7rem;
+    font-weight: 800;
+    position: relative;
+    margin-left: .7rem;
+}
+
+.price-valor::before {
+    content: '$';
+    font-size: 1rem;
+    position:absolute;
+    left: -20%;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--negro);
+    margin-bottom: 1rem!important;
+}
+
+.item-img {
+    width: 60%;
+    transform: scale(1);
+    transition: var(--animacion-hover);
+}
+
+
+    .card:hover .card-secondary{
+        height: 190px;
+        transition: var(--animacion-hover);
+    }
+
+    .card:hover .item-img {
+        transform: scale(1.2);
+        transition: var(--animacion-hover);
+        margin-bottom: .5rem;
+    }
+
+.item-description {
+    width: 93%;
+    overflow: hidden;
+    font-size: .7rem;
+    letter-spacing: .02rem;
+    font-weight: 500;
+    color: var(--negro);
+    height:0px;
+    transition: var(--animacion-hover);
+    margin: auto;
+    margin-bottom: 1.2rem;
+    opacity: 0;
+}
+
+    .card:hover .item-description {
+        height: 46px;
+        opacity: 1;
+        transition: var(--animacion-hover);
+    }
+
+.item-info div {
+    border-right: 2px solid #f6f6f6;
+    padding:0 .5rem 0;
+    justify-content: center;
+    width: max-content;
+}
+
+.info-title {
+    text-transform: uppercase;
+    color: var(--verde-claro);
+    font-weight: bold;
+    font-size: .6rem;
+    letter-spacing: .1rem;
+}
+
+.info-data {
+    color:var(--negro);
+    font-size: .7rem;
+    font-weight: 500;
+    margin-top: .4rem;
+}
+
+.add-to-cart {
+    color: var(--verde-claro);
+    font-size: 1.5rem;
+    background-color:var(--blanco);
+    border-radius: 50%;
+    padding: .5rem;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all ease-in-out 200ms;
+}
+    .add-to-cart:hover {
+        transform: scale(1.2);
+        background-color: var(--verde-claro);
+        color: var(--blanco);
+        transition: all ease-in-out 200ms;
+    }
+
+.centavos {
+    font-size: 50%;
+    vertical-align: super;
+}
