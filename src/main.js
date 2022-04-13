@@ -1,8 +1,10 @@
 import Vue from 'vue'
+import router from './router'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import axios from 'axios'
 import store from './store'
+
 
 Vue.config.productionTip = false
 
@@ -69,5 +71,6 @@ axios.defaults.baseURL = 'https://6238139a00ed1dbc5aae04f7.mockapi.io/api/tp2/'
 new Vue({
   vuetify,
   store,
+  router,
   render: h => h(App)
 }).$mount('#app')
